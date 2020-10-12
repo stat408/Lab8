@@ -1,6 +1,4 @@
-# Lab8
-
-Please turn in **both an HTML/PDF/DOC file and your R Markdown script**. 
+Lab 8
 
 ## Lab Overview
 
@@ -25,7 +23,7 @@ Suppose would like to identify whether there are more Uber pickups on a weekday 
 - a character string with the `uber$Date.Time` format and 
 - returns a character string stating whether the day is a `weekday` or `weekend`.
 
-```
+```{r}
 FindDay <- function(day){
   # finds ... 
   # ARGS:
@@ -37,7 +35,7 @@ FindDay <- function(day){
 
 Verify this works by running the the following code.
 
-```
+```{r, eval = F}
 FindDay("5/1/2014 0:02:00")
 FindDay(uber$Date.Time[1])
 FindDay(uber$Date.Time[142812])
@@ -46,7 +44,7 @@ FindDay(uber$Date.Time[142812])
 #### b. (5 points)
 We are also interested in knowing which block of time has the most trips. Note that these times are in military time, where 0 = midnight and 20 = 8 PM. Write a function called `FindTime()` that:
 
-- takes an input time as hh:mm ("12:21") in military time and 
+- takes an input time as hh:mm ("23:12") or h:mm ('4:37') in military time and 
 -returns the following blocks of time:
 
     - "late night": after 22 - to 4
@@ -56,7 +54,7 @@ We are also interested in knowing which block of time has the most trips. Note t
 
 Now complete the function below and include documentation
 
-```
+```{r}
 FindTime <- function(time.in){
   # Function to 
   # ARGS: time as string with 'hh:mm'
@@ -64,5 +62,5 @@ FindTime <- function(time.in){
   
 }
 ```
-Demonstrate this works by showing `FindTime('04:37')` and `FindTime('23:12')`
+Demonstrate this works by showing `FindTime('4:37')` and `FindTime('23:12')`
 
