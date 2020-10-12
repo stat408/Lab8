@@ -49,7 +49,7 @@ FindDay(uber$Date.Time[142812])
 #### b. (5 points)
 We are also interested in knowing which block of time has the most trips. Note that these times are in military time, where 0 = midnight and 20 = 8 PM. Write a function called `FindTime()` that:
 
-- takes an input time as hh:mm:ss ("12:21:00") in military time and 
+- takes an input time as hh:mm ("12:21") in military time and 
 -returns the following blocks of time:
 
     - "late night": after 22 - to 4
@@ -67,5 +67,5 @@ FindTime <- function(time.in){
   
 }
 ```
-Demonstrate this works by showing `FindTime('04:37:17')` and `FindTime('23:12:01')`
+Demonstrate this works by showing `FindTime('04:37')` and `FindTime('23:12')`
 
